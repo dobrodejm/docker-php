@@ -127,3 +127,6 @@ app/composer.lock
 
 # .env file
 .env
+
+# Ignore result of phpunit tests
+.phpunit.result.cache
