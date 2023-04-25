@@ -119,3 +119,11 @@ fabric.properties
 .idea
 
 branches.txt
+
+# Composer vendor folder
+app/vendor
+# Composer.lock file
+app/composer.lock
+
+# .env file
+.env
