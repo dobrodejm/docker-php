@@ -121,6 +121,6 @@ fabric.properties
 branches.txt
 
 # Composer vendor folder
-./app/vendor
+app/vendor
 # Composer.lock file
-./app/composer.lock
+app/composer.lock
