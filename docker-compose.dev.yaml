@@ -18,6 +18,8 @@ services:
             MYSQL_DATABASE: ${MYSQL_DATABASE}
             MYSQL_USER: ${MYSQL_USER}
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+            REDIS_HOST: cache
+            REDIS_PORT: ${REDIS_PORT}
 
     # mysql
     db:
@@ -33,6 +35,11 @@ services:
             MYSQL_USER: user
             MYSQL_PASSWORD: secret
     # redis
+    cache:
+        image: redis:6.2.6
+        ports:
+            - "6379:6379"
+        restart: unless-stopped
 
 volumes:
     mysqldata:
