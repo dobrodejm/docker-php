@@ -119,3 +119,6 @@ fabric.properties
 .idea
 
 branches.txt
+
+# Composer vendor folder
+./app/vendor
