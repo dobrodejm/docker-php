@@ -1,7 +1,8 @@
 services:
     # nginx
     web:
-        image: nginx:latest
+        build:
+            dockerfile: ./nginx/Dockerfile
         ports:
             - "80:80"
         volumes:
@@ -10,18 +11,14 @@ services:
     app:
         build:
             dockerfile: ./php/Dockerfile
-        volumes:
-            - /var/www/html/vendor
-            - ./app:/var/www/html
     # mysql
     db:
         image: mysql:8.0
         volumes:
             - mysqldata:/var/lib/mysql
-        ports:
-            - "3306:3306"
-        restart: unless-stopped
+        restart: unless-stopped #In Prod, this should be "always"
         environment:
+            #In prod, this should be fx a .env file
             MYSQL_ROOT_PASSWORD: secret
             MYSQL_DATABASE: docker-php
             MYSQL_USER: user
