@@ -122,3 +122,5 @@ branches.txt
 
 # Composer vendor folder
 ./app/vendor
+# Composer.lock file
+./app/composer.lock
