@@ -124,3 +124,6 @@ branches.txt
 app/vendor
 # Composer.lock file
 app/composer.lock
+
+# .env file
+.env
